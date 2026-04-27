@@ -1,0 +1,32 @@
+Router 2811 CLI Commands:
+
+enable
+conf t
+host ephone
+
+interface f0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+
+telephony-service
+max-ephones 5
+max-dn 5
+ip source-address 192.168.1.1 port 2000
+auto assign 1 to 2
+exit
+
+ephone-dn 1
+number 0001
+ephone-dn 2
+number 0002
+exit
+
+ip dhcp pool ephone
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.1
+option 150 ip 192.168.1.1
+exit
+
+
+Then Power on the phones

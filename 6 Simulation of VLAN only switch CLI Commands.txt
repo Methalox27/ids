@@ -1,0 +1,21 @@
+enable
+conf t
+interface f0/1
+switchport access vlan 2
+interface f0/2
+switchport access vlan 2
+interface f0/3
+switchport access vlan 3
+interface f0/4
+switchport access vlan 3
+exit
+
+
+
+
+
+
+
+
+
+
